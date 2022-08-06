@@ -1,0 +1,196 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-bgc);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-animation);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-animation);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primery-bgr-color);
+  width: 528px;
+  height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primery-bgr-color);
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-animation);
+  cursor: pointer;
+}
+
+.icon-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+}
+
+.btn-close:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.topic {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.modal__form-contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  transition: border-color 250ms var(--cubic-animation);
+}
+
+.modal__form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primery-text-color);
+  margin-bottom: 4px;
+}
+
+.field-contact {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  padding-left: 42px;
+  outline: currentColor;
+  transition: border-color 250ms var(--cubic-animation);
+}
+
+.field-contact:focus {
+  outline: var(--accent-color);
+}
+
+.modal__form-contact:focus-within .field-contact,
+.modal__form-contact:hover .field-contact {
+  border: 1px solid var(--accent-color);
+}
+
+.icon-name {
+  position: absolute;
+  top: 65%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
+  fill: var(--secondary-text-color);
+  transition: fill 250ms var(--cubic-animation);
+}
+
+.field-contact:focus ~ .icon-name,
+.field-contact:hover ~ .icon-name {
+  fill: var(--accent-color);
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.comments__text {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  outline: currentColor;
+}
+
+.comments:focus-within .comments__text,
+.comments:hover .comments__text {
+  border: 1px solid var(--accent-color);
+}
+
+.coment-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primery-text-color);
+  margin-bottom: 4px;
+}
+
+.policy {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.terms {
+  color: var(--accent-color);
+}
+
+.modal__accept-btn {
+  display: flex;
+  min-width: 200px;
+  background: var(--head-button-bgr-color);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 55px 10px 56px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--head-text-color);
+  transition: background-color 250ms var(--cubic-animation);
+  cursor: pointer;
+}
+
+.modal__accept-btn:hover,
+.modal__accept-btn:focus {
+  background: var(--hover-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

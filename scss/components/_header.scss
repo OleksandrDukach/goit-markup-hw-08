@@ -1,0 +1,129 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: solid 1px var(--head-border-line);
+}
+.header__menu-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  color: var(--logo-color-sec);
+  display: inline-block;
+  text-decoration-line: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+.logo--blue {
+  color: var(--accent-color);
+}
+
+.header__navigation {
+  margin-left: 93px;
+}
+
+.header__page-nav {
+  color: var(--secondary-text-color);
+  display: flex;
+  list-style: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header__page-nav .header__item {
+  margin-right: 50px;
+}
+
+.header__page-nav .header__item:last-child {
+  margin-right: 0px;
+}
+
+.header__link {
+  color: var(--secondary-text-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header__link--current {
+  color: var(--accent-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header__contact-info {
+  color: var(--primery-text-color);
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-decoration-line: none;
+  list-style: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header__contacts-list .header__contact-item {
+  margin-right: 50px;
+}
+.header__contacts-list .header__contact-item:last-child {
+  margin-right: 0px;
+}
+
+/* ==========Задали синюю полосу в навигации по страницам========== */
+
+.header__link--current {
+  position: relative;
+}
+
+.header__link--current::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  display: block;
+  background-color: var(--head-button-bgr-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}

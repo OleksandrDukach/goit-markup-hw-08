@@ -1,0 +1,38 @@
+// Project card
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.project__card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.project-title {
+  color: var(--secondary-text-color);
+  background-color: var(--head-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.project-card-description {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: solid 1px var(--border-color);
+  border-top: none;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.87;
+  background-color: var(--head-text-color);
+}
