@@ -91,6 +91,7 @@ address {
 }
 
 .header__menu-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,6 +221,47 @@ address {
   width: 100%;
   height: 4px;
   border-radius: 2px;
+}
+
+.header__menu--btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: currentColor;
+  background-color: #fff;
+  border: none;
+}
+.header__menu--btn:hover, .header__menu--btn:focus {
+  color: var(--accent-color);
+}
+
+.header__menu--btn .icon-cross {
+  display: none;
+}
+
+.header__menu--btn.is-open .icon-cross {
+  display: block;
+}
+
+.header__menu--btn.is-open .icon-mob-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.menu-container.is-open {
+  display: block;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
 .backdrop {

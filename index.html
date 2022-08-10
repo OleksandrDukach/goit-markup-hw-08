@@ -37,6 +37,7 @@
                         <a class="header__link link" href="#">Контакты</a>
                     </li>
                 </ul>
+
             </nav>
             <ul class="header__contacts-list list">
                 <li class="header__contact-item">
@@ -53,6 +54,13 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="header__menu--btn is-open" aria-expanded="true" data-menu-button>
+                <svg width="40" height="40" aria-label="Mobile-menu switch" aria-controls="menu-container">
+                    <use class="icon-mob-menu" href="./images/icons.svg#icon-menu_40px-1"></use>
+                    <use class="icon-cross" href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="menu-container is-open" id="menu-container" data-menu>Контент меню</div>
         </div>
     </header>
     <main>
@@ -456,6 +464,8 @@
     </div>
 
     <!-- Ставим перед закрывающим тегом body -->
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 
